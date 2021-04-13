@@ -1,0 +1,44 @@
+{
+  "name": "git-bike-store",
+  "version": "1.2.0",
+  "private": true,
+  "description": "git-bike-store",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "build": "NODE_OPTIONS=\"-r esm\" gatsby build",
+    "develop": "NODE_OPTIONS=\"-r esm\" gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "gatsby": "^3.2.1",
+    "gatsby-plugin-image": "^1.2.1",
+    "gatsby-plugin-react-helmet": "^4.2.0",
+    "gatsby-plugin-sharp": "^3.2.1",
+    "gatsby-plugin-styled-components": "^4.2.0",
+    "gatsby-source-filesystem": "^3.2.0",
+    "gatsby-source-shopify": "^4.2.0",
+    "gatsby-source-shopify-storefront": "^1.0.0",
+    "gatsby-transformer-sharp": "^3.2.0",
+    "lodash": "^4.17.21",
+    "node": "^15.12.0",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.2.0",
+    "shopify-buy": "^2.11.0",
+    "styled-components": "^5.2.3"
+  },
+  "main": "gatsby-browser.js",
+  "module": "main.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
