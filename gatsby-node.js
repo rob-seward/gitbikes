@@ -1,6 +1,6 @@
-//import path, { resolve } from 'path';
+import path, { resolve } from 'path';
 
-const path = require('path');
+//const path = require('path');
 
 async function trunBikesIntoPages({ graphql, actions }) {
   const bikeTemplate = path.resolve('./src/templates/Bike.js');

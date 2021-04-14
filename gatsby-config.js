@@ -1,14 +1,16 @@
 //import dotenv from 'dotenv';
 
 //dotenv.config({ path: '.env' });
-
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+
+ console.log('got his far');
+
 module.exports = {
   siteMetadata: {
-    title: "git-bike-store",
+    title: "git-bike",
     siteUrl: `https://gatsby.gitbikes`,
     description: `the dopest bikes in the hood`,
     twitter: `@gitbikes`,

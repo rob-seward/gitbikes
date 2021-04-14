@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
-// import shopify-buy client
+//import Client from 'shopify-buy';
 import { StoreContext } from '../components/context/StoreContext';
 
 const SingleBikeStyled = styled.div`
