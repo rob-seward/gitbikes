@@ -1,4 +1,4 @@
-import path, { resolve } from 'path';
+import path from 'path';
 
 //const path = require('path');
 
@@ -7,19 +7,22 @@ async function trunBikesIntoPages({ graphql, actions }) {
   // 2. query all bikes
   const { data } = await graphql(`
     query {
-      bikes: allShopifyProduct(filter: { productType: { eq: "BIKE" } }) {
+      allShopifyProduct {
         edges {
           node {
             handle
+            id
           }
         }
       }
     }
   `);
-  console.log(data);
+
+  console.log(data, 'what the...');
+  
 
   // 3. loop over each bike a nd create page
-  data.bikes.edges.forEach((bike) => {
+  data.allShopifyProduct.edges.forEach((bike) => {
     console.log('creating a page for', bike.node.handle);
     actions.createPage({
       // What is the URL for this page
@@ -44,4 +47,3 @@ export async function createPages(params) {
   // Parts
   // Team member page
 }
-

@@ -14,7 +14,7 @@ export default function BikesPage({ data }) {
   const bikes = data.bikes.nodes;
   return (
     <BikesPageStyles>
-      <BikeList bikes={bikes} />
+      <BikeList key={bikes.id} bikes={bikes} />
     </BikesPageStyles>
   );
 }
@@ -38,7 +38,7 @@ export const query = graphql`
           localFile {
             childImageSharp {
               gatsbyImageData(
-                width: 300
+                width: 500
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
