@@ -82,7 +82,7 @@ export default function SingleBikePage({ data: { bike } }) {
   const dImage = getImage(oneBike.images[3].localFile);
   const eImage = getImage(oneBike.images[4].localFile);
 
-  const price = bike.nodes[0].priceRange.maxVariantPrice.amount;
+  const price = bike.nodes[0].priceRangeV2.maxVariantPrice.amount;
 
   return (
     <SingleBikeStyled>
@@ -123,7 +123,7 @@ export const query = graphql`
         variants {
           id
         }
-        priceRange {
+        priceRangeV2 {
           maxVariantPrice {
             amount
           }

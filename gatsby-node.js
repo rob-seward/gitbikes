@@ -30,6 +30,7 @@ async function trunBikesIntoPages({ graphql, actions }) {
       component: bikeTemplate,
       context: {
         rob: 'is cool',
+        id: bike.node.id,
         slug: bike.node.handle,
       },
     });

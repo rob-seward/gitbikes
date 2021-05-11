@@ -32,7 +32,7 @@ function SingleBike({ bike }) {
     <SingleBikeStyled>
       <GatsbyImage image={image} alt={bike.handle} />
       <Link to={`bike/${bike.handle}`}>{bike.title}</Link>
-      <p className="price">{`£${bike.priceRange.maxVariantPrice.amount}`}</p>
+      <p className="price">{`£${bike.priceRangeV2.maxVariantPrice.amount}`}</p>
     </SingleBikeStyled>
   );
 }
@@ -41,7 +41,7 @@ export default function BikeList({ bikes }) {
   return (
     <BikeListStyled>
       {bikes.map((bike) => (
-        <SingleBike bike={bike} />
+        <SingleBike key={bike.id} bike={bike} />
       ))}
     </BikeListStyled>
   );

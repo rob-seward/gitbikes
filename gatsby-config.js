@@ -1,9 +1,10 @@
-//import dotenv from 'dotenv';
-
-//dotenv.config({ path: '.env' });
+/*import dotenv from 'dotenv';
+dotenv.config({ path: '.env' });
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+})*/
+
+require('dotenv').config()
 
 
  console.log('got his far');
@@ -17,14 +18,19 @@ module.exports = {
   },
   plugins: [
     {
-      flags: { PRESERVE_WEBPACK_CACHE: true },
-      resolve: 'gatsby-source-shopify',
+      resolve: 'gatsby-source-shopify-experimental',
       options: {
-        shopName: process.env.GATSBY_SHOPIFY_STORE_URL,
-        accessToken: process.env.GATSBY_STOREFRONT_ACCESS_TOKEN,
-        verbose: true,
-        paginationSize: 50,
+        apiKey: process.env.SHOPIFY_ADMIN_API_KEY,
+        password: process.env.SHOPIFY_ADMIN_PASSWORD,
+        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
         downloadImages: true,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/assets/images`,
+        name: `images`,
       },
     },
     {
@@ -45,13 +51,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/assets/images/",
-      },
-      __key: "images",
-    },
+    
   ],
 };

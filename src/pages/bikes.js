@@ -25,7 +25,7 @@ export const query = graphql`
       nodes {
         id
         title
-        priceRange {
+        priceRangeV2 {
           maxVariantPrice {
             amount
           }
